@@ -1,0 +1,30 @@
+{
+  "name": "final-portfolio",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emssslay/final-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emssslay/final-portfolio/issues"
+  },
+  "homepage": "https://github.com/emssslay/final-portfolio#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.1",
+    "helmet": "^3.18.0"
+  }
+}
