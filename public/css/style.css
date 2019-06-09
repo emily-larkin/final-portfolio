@@ -1,0 +1,245 @@
+.brand-logo {
+    top: 26px;
+    left: 250px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 50px;
+    overflow: auto;
+    color: #dce2e1 !important;
+    text-shadow: 1.8px 1.8px #858585;
+
+}
+
+/* text of carousel and phone  */
+.container {
+    color: #dce2e1;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 20px;
+}
+
+/* header and footer  */
+.nav-wrapper,
+.page-footer {
+    background-color: #5ba1b0;
+    color: #dce2e1;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 24px;
+    text-shadow: .9px .9px #858585;
+}
+
+/* carousel with projects */
+#carousel-section {
+    background-color: #5ba1b0;
+}
+
+/* bottom bottom footer */
+.footer-copyright {
+    background-color: #5ba1b0;
+}
+
+/* all links  */
+a {
+    color: #dce2e1;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* about me section  */
+.card {
+    background-color: #5ba1b0;
+    color: #dce2e1;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 20px;
+    top: 25px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* title of about me  */
+.card-title {
+    font-size: 22px;
+}
+
+/* project title  */
+h2 {
+    margin-top: -5px;
+}
+
+/* container for about me  */
+.about-me {
+    background-color: #dce2e1;
+    margin-bottom: -20px;
+}
+
+/* picture of me */
+.selfie {
+    border-radius: 50%;
+    max-width: 13%;
+    max-height: 13%;
+    position: relative;
+    left: 460px;
+    top: 12px;
+}
+
+.repoLinks:hover {
+    color: #c7cdcc;
+}
+
+/* container for connect area  */
+.parallax-container {
+    height: 170px;
+    background-color: #dce2e1;
+}
+
+/* styling for connect text */
+.contact-info {
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    color: #5ba1b0;
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: #dce2e1;
+    text-shadow: .8px .8px #858585;
+}
+
+/* connect heading size */
+.contact-head {
+    font-size: 30px
+}
+
+/* icon styling  */
+.fa-github, .fa-linkedin, .fa-envelope-open, .fa-phone-square {
+    padding: 5px;
+    font-size: 40px;
+    color: #5ba1b0;
+}
+
+/* icon hover */
+.fa-github:hover, .fa-linkedin:hover, .fa-envelope-open:hover, .fa-phone-square:hover {
+    color: #4a8491;
+}
+
+/* media queries  */
+
+@media only screen and (min-width: 0px) and (max-width: 420) {
+    .carousel, .carousel-item>img {
+        height: 200px;
+    }
+    .carousel-item {
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 471px) {
+    .carousel, .carousel-item>img {
+        height: 200px;
+    }
+    .carousel-item {
+        padding: 0px 30px;
+    }
+}
+
+@media only screen and (min-width: 471px) and (max-width: 500px) {
+    .carousel, .carousel-item>img {
+        height: 200px;
+    }
+    .carousel-item {
+        padding: 0px 45px;
+    }
+}
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 380px) {
+    .selfie {
+        left: 260px;
+        top: 20px;
+        max-width: 20%;
+        max-height: 20%;
+    }
+    .brand-logo {
+        left: 40% !important;
+    }
+}
+
+@media only screen and (min-width: 381px) and (max-width: 450px) {
+    .selfie {
+        left: 285px;
+        top: 18px;
+        max-width: 20%;
+        max-height: 20%;
+    }
+    .brand-logo {
+        left: 40% !important;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 502px) {
+    .selfie {
+        left: 320px;
+        top: 20px;
+        max-width: 17%;
+        max-height: 17%;
+    }
+    .brand-logo {
+        left: 40% !important;
+    }
+}
+
+@media only screen and (min-width: 503px) and (max-width: 550px) {
+    .selfie {
+        left: 330px;
+        top: 20px;
+        max-width: 16%;
+        max-height: 16%;
+    }
+    .brand-logo {
+        left: 40% !important;
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 700px) {
+    .selfie {
+        left: 400px;
+        top: 15px;
+        max-width: 14%;
+        max-height: 14%;
+    }
+    .brand-logo {
+        left: 40% !important;
+    }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 767px) {
+    .selfie {
+        left: 420px;
+        top: 15px;
+        max-width: 14%;
+        max-height: 14%;
+    }
+    .brand-logo {
+        left: 40% !important;
+    }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 800px) {
+    .selfie {
+        left: 450px;
+        top: 15px;
+        max-width: 14%;
+        max-height: 14%;
+    }
+    .brand-logo {
+        left: 40% !important;
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 913px) {
+    .selfie {
+        left: 450px;
+        top: 15px;
+        max-width: 13%;
+        max-height: 13%;
+    }
+    .brand-logo {
+        left: 40% !important;
+    }
+}
