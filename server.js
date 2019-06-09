@@ -9,6 +9,10 @@ var PORT = process.env.PORT || 3000;
 
 var db = require("./models");
 
+app.get("/", function(req, res) {
+    res.send("Profile page");
+  });
+
 // Middleware
 app.use(helmet());
 app.use(express.urlencoded({
@@ -33,37 +37,6 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
-
-app.get("/", function(req, res) {
-    res.send("Profile page");
-  });
-
-// Sets cookies to secure https when in production, 
-// but not in development
-// var secureCookie = false;
-// if (process.env.NODE_ENV === "production") {
-//   secureCookie = true;
-// }
-// app.use(session({
-//   secret: "jnI67r12gfJH79Greb0EmnObvesk5J98HgfG",
-//   resave: false,
-//   saveUninitialized: true,
-//   cookie: {
-//     maxAge: 1000 * 60 * 60,
-//     sameSite: true,
-//     secure: secureCookie
-//   }
-// }));
-
-function userSetup(req, res, next) {
-  if (!req.session.user) {
-    req.session.user = {};
-    // req.session.user.loggedIn = false;
-  }
-  next();
-}
-//using middlewhere acrossed the entire application before any route gets hit.
-app.use(userSetup);
 
 // Handlebars
 app.engine(
