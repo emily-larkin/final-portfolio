@@ -9,9 +9,6 @@ var PORT = process.env.PORT || 3000;
 
 var db = require("./models");
 
-// Login Routes
-var loginRouter = require("./routes/loginRoutes");
-
 // Middleware
 app.use(helmet());
 app.use(express.urlencoded({
@@ -36,6 +33,10 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+
+app.get("/", function(req, res) {
+    res.send("Profile page");
+  });
 
 // Sets cookies to secure https when in production, 
 // but not in development
@@ -74,11 +75,7 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // route to handle user registration
-app.use("/", loginRouter);
-
-// Routes
-require("./routes/userRoutes")(app);
-
+// app.use("/", loginRouter);
 
 var syncOptions = {
   force: false
