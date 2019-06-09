@@ -1,83 +1,39 @@
-require("dotenv").config();
+// ==============================================================================
+// DEPENDENCIES
+// Series of npm packages that we will use to give our server useful functionality
+// ==============================================================================
+
 var express = require("express");
+
+// ==============================================================================
+// EXPRESS CONFIGURATION
+// This sets up the basic properties for our express server
+// ==============================================================================
+
+// Tells node that we are creating an "express" server
 var app = express();
-var helmet = require("helmet");
-var exphbs = require("express-handlebars");
-var session = require("express-session");
 
-var PORT = process.env.PORT || 3000;
+// Sets an initial port. We"ll use this later in our listener
+var PORT = process.env.PORT || 8080;
 
-var db = require("./models");
-
-app.get("/", function(req, res) {
-    res.send("Profile page");
-  });
-
-// Middleware
-app.use(helmet());
-app.use(express.urlencoded({
-  extended: true
-})
-);
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
 
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
+// ================================================================================
+// ROUTER
+// The below points our server to a series of "route" files.
+// These routes give our server a "map" of how to respond when users visit or request data from various URLs.
+// ================================================================================
+
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+
+// =============================================================================
+// LISTENER
+// The below code effectively "starts" our server
+// =============================================================================
+
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
 });
-
-// Sessions ===============================================
-app.use(session({
-  secret: process.env.SESSIONSECRET || "cat",
-  resave: false,
-  saveUninitialized: true
-}));
-
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
-
-// route to handle user registration
-// app.use("/", loginRouter);
-
-var syncOptions = {
-  force: false
-};
-
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-if (process.env.NODE_ENV === "development") {
-  syncOptions.force = true;
-}
-
-// // Timeout
-// app.use(timeout(15000));
-// app.use(haltOnTimedout);
-
-// function haltOnTimedout(req, res, next) {
-//   if (!req.timedout) {next();
-//   }
-// }
-
-// Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function () {
-  app.listen(PORT, function () {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
-});
-
-module.exports = app;

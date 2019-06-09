@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Emily Robinson's Portfolio</title>
+
+<head>
+    <title></title>
+
+    <meta charset="UTF-8">
+
+    <!-- firebase link  -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+
+    <!-- font link  -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300i" rel="stylesheet">
+
+    <!-- font awesome for icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav class="nav-extended">
+        <div class="nav-wrapper z-depth-4">
+            <div class="emily">
+                <a href="#" class="brand-logo">Emily Robinson</a>
+            </div>
+            <!-- image of me  -->
+            <ul id="nav-mobile" class="right">
+                <li><img class="selfie" src="./assets/images/Screen Shot 2019-01-07 at 1.23.13 PM.png"
+                        alt="Emily Robinson"></li>
+            </ul>
+            <br><br>
+        </div>
+    </nav>
+
+    <!-- parallax settings  -->
+    <!-- about me section  -->
+    <div class="about-me">
+        <div class="row container">
+            <div class="parallax">
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s10 m10">
+                        <div class="card z-depth-4">
+                            <div class="card-content">
+                                <span class="card-title">About Me</span>
+                                <p>My name is Emily Robinson! I enjoy eating, sleeping, watching anime, occasionally
+                                    gaming and doing Muay Thai. So don't mess with me! I recently finished working on my
+                                    associates degree, and I love to be challenged, so I decided to become a developer.
+                                    See below for some of my work!
+                                </p>
+                            </div>
+                            <div class="card-action">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+ <!-- carousel section -->
+    <div class="section z-depth-4" id="carousel-section">
+        <div class="row container">
+            <h2 class="header"></h2>
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item center">
+                </div>
+                <div class="carousel-item" href="https://emssslay.github.io/travel-project/">
+                    <h2>The Adventure Setter - Project</h2>
+                    <p><a class="repoLinks" href="https://emssslay.github.io/travel-project/" target="_blank">Hosted
+                            Site |
+                        </a><a class="repoLinks" href="https://github.com/emssslay/travel-project" target="_blank">
+                            Repository</a></p>
+                    <img src="./assets/images/Screen Shot 2019-04-04 at 12.44.51 PM.png">
+                </div>
+                <div class="carousel-item" href="https://emssslay.github.io/Giphy-API/">
+                    <h2>Anime Giphy API - Homework</h2>
+                    <p><a class="repoLinks" href="https://emssslay.github.io/Giphy-API/" target="_blank">Hosted Site |
+                        </a><a class="repoLinks" href="https://github.com/emssslay/Giphy-API" target="_blank">
+                            Repository</a></p>
+                    <img src="./assets/images/Screen Shot 2019-04-04 at 12.46.47 PM.png">
+                </div>
+                <div class="carousel-item" href="https://enigmatic-ravine-73347.herokuapp.com/">
+                    <h2>Friend Finder - Homework</h2>
+                    <p><a class="repoLinks" href="https://enigmatic-ravine-73347.herokuapp.com/"
+                            target="_blank">Hosted
+                            Site | </a><a class="repoLinks" href="https://github.com/emssslay/Friend-Finder"
+                            target="_blank"> Repository</a></p>
+                    <img src="./assets/images/Screen Shot 2019-05-06 at 3.59.53 PM.png">
+                </div>
+                <div class="carousel-item" href="#">
+                    <h2>Liri Bot - Homework</h2>
+                    <p><a class="repoLinks" href="#" target="_blank">No Hosted Site |
+                        </a><a class="repoLinks" href="https://github.com/emssslay/Liri-Node-App" target="_blank">
+                            Repository</a></p>
+                    <img src="./assets/images/Screen Shot 2019-04-15 at 5.11.31 PM.png">
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+
+    <!-- connect with me section -->
+    <div class="parallax-container z-depth-4">
+        <div>
+            <div class="contact-info">
+                <h3 class="contact-head">Connect With Me!</h3>
+                <div class="links-social">
+                    <a href="https://github.com/emssslay/" target="_blank"><i class="fab fa-github"
+                            id="githubLink"></i></a>
+                    <a href="https://www.linkedin.com/in/emily-robinson-532318a3/" target="_blank"><i
+                            class="fab fa-linkedin" id="linkedInLink"></i></a>
+                    <a href="mailto:emssslay@gmail.com"><i class="fas fa-envelope-open" id="mailLink"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col 14 offset-4 s12">
+                    <div class="resume-phone">
+                        <h6><a href="file:///Users/erobinson/Downloads/Resume.pdf" target="_blank">Link to Resume</a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- jquery  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- JavaScript -->
+<script src="./assets/javascript/profile.js"></script>
+
+</html>
