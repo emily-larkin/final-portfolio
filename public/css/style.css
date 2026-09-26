@@ -65,7 +65,7 @@ h2 {
 }
 
 /* container for about me  */
-.about-me {
+.about-me, .education {
     background-color: #dce2e1;
     margin-bottom: -20px;
 }
